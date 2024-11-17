@@ -20,7 +20,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #pragma once
 
-#define DYNAMIC_KEYMAP_LAYER_COUNT 4
+#define DYNAMIC_KEYMAP_LAYER_COUNT 5
 #define TAPPING_TERM 200
 #define COMBO_TERM 30
 #define COMBO_HOLD_TERM 150

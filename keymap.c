@@ -30,17 +30,17 @@ enum custom_keycodes {
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
-        case MACRO_CUT:
+        case M_CUT:
             if (record->event.pressed) {
                 SEND_STRING(SS_LCTL("x"));
             }
             break;
-        case MACRO_COPY:
+        case M_COPY:
             if (record->event.pressed) {
                 SEND_STRING(SS_LCTL("c"));
             }
             break;
-        case MACRO_PASTE:
+        case M_PASTE:
             if (record->event.pressed) {
                 SEND_STRING(SS_LCTL("v"));
             }
@@ -117,7 +117,7 @@ enum layers {
     _SYM,
     _FUNC,
     _GAME,
-}
+};
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [_BASE] = LAYOUT_split_3x6_3(
