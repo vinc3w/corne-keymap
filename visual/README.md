@@ -1,0 +1,1 @@
+npx nodemon -w keymap/index.yaml -x keymap draw keymap/index.yaml -o keymap/keymap.svg
