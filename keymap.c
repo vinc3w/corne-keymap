@@ -75,20 +75,11 @@ enum combos {
 
 const uint16_t PROGMEM del_combo[]               = {KC_W, KC_E, COMBO_END};
 const uint16_t PROGMEM refresh_comboo[]          = {KC_E, KC_R, COMBO_END};
-// const uint16_t PROGMEM print_screen_combo[]      = {KC_W, KC_E, KC_R, COMBO_END};
 
 const uint16_t PROGMEM caps_combo[]              = {LALT_T(KC_S), LSFT_T(KC_D), COMBO_END};
-// const uint16_t PROGMEM tab_combo[]               = {LSFT_T(KC_D), LCTL_T(KC_F), COMBO_END};
-// const uint16_t PROGMEM play_pause_combo[]        = {LALT_T(KC_S), LSFT_T(KC_D), LCTL_T(KC_F), COMBO_END};
 const uint16_t PROGMEM play_pause_combo[]        = {LSFT_T(KC_D), LCTL_T(KC_F), COMBO_END};
 const uint16_t PROGMEM print_screen_combo[]      = {LALT_T(KC_S), LSFT_T(KC_D), LCTL_T(KC_F), COMBO_END};
 
-// const uint16_t PROGMEM cut_combo[]               = {KC_X, KC_C, COMBO_END};
-// const uint16_t PROGMEM copy_combo[]              = {KC_C, KC_V, COMBO_END};
-// const uint16_t PROGMEM paste_combo[]             = {KC_X, KC_C, KC_V, COMBO_END};
-
-// const uint16_t PROGMEM enter_combo[]             = {RCTL_T(KC_J), RSFT_T(KC_K), COMBO_END};
-// const uint16_t PROGMEM backspace_combo[]         = {RSFT_T(KC_K), RALT_T(KC_L), COMBO_END};
 const uint16_t PROGMEM esc_combo[]               = {RCTL_T(KC_J), RSFT_T(KC_K), RALT_T(KC_L), COMBO_END};
 
 combo_t key_combos[] = {
@@ -96,13 +87,7 @@ combo_t key_combos[] = {
     [REFRESH]          = COMBO(refresh_comboo, KC_F5),
     [PRINT_SCREEN]     = COMBO(print_screen_combo, KC_PSCR),
     [CAPS]             = COMBO(caps_combo, KC_CAPS),
-    // [TAB]              = COMBO(tab_combo, KC_TAB),
     [PLAY_PAUSE]       = COMBO(play_pause_combo, KC_MPLY),
-    // [CUT]              = COMBO(cut_combo, MACRO_CUT),
-    // [COPY]             = COMBO(copy_combo, MACRO_COPY),
-    // [PASTE]            = COMBO(paste_combo, MACRO_PASTE),
-    // [ENTER]            = COMBO(enter_combo, KC_ENT),
-    // [BACKSPACE]        = COMBO(backspace_combo, KC_BSPC),
     [ESC]              = COMBO(esc_combo, KC_ESC),
 };
 
@@ -140,7 +125,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
             XXXXXXX, _______,   M_CUT,  M_COPY, M_PASTE, _______,                       KC_DOT,    KC_1,    KC_2,    KC_3, KC_PERC, XXXXXXX,
         //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
-                                                _______, _______, _______,    _______,   MO(_FUNC),    KC_0
+                                                _______, _______, _______,    _______,    KC_0, _______
                                             //`--------------------------'  `--------------------------'
     ),
 
@@ -152,7 +137,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
             XXXXXXX, KC_HASH, KC_QUES, KC_ASTR, KC_UNDS, KC_QUOT,                      KC_TILD, KC_COMM, KC_LCBR, KC_RCBR,   KC_AT, XXXXXXX,
         //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
-                                                _______,   MO(_FUNC), _______,    _______, _______, _______
+                                                _______, _______, _______,    _______, _______, _______
                                             //`--------------------------'  `--------------------------'
     ),
 
@@ -170,13 +155,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     [_GAME] = LAYOUT_split_3x6_3(
         //,-----------------------------------------------------.                    ,-----------------------------------------------------.
-            XXXXXXX,  KC_TAB,    KC_Q,    KC_W,    KC_E,    KC_R,                      _______, _______, _______, _______, _______, XXXXXXX,
+            XXXXXXX,  KC_ESC,    KC_Q,    KC_W,    KC_E,    KC_R,                      _______, _______, _______, _______, _______, XXXXXXX,
         //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
             XXXXXXX, KC_LSFT,    KC_A,    KC_S,    KC_D,    KC_F,                      _______, _______, _______, _______, _______, XXXXXXX,
         //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
             XXXXXXX, KC_LCTL,    KC_Z,    KC_X,    KC_C,    KC_V,                      _______, _______, _______, _______, _______, XXXXXXX,
         //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
-                                                 KC_ESC,  KC_SPC,  TG(_BASE),    _______, _______, _______
+                                                KC_LGUI,  KC_SPC,  KC_TAB,    _______, _______, _______
                                             //`--------------------------'  `--------------------------'
     )
 };
